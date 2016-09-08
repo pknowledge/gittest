@@ -8,6 +8,14 @@ var fs = require('fs-extra');
 var qt = require('quickthumb');
 var cmd = require('node-cmd');
 //configure app
+
+var config= {
+  port: process.env.PORT || 1337,
+  description: "Your App's REST Backend",
+  title: "Westcost Example API"
+};
+
+
 //app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 
@@ -68,6 +76,8 @@ app.get('/output/:id', function (req, res) {
     res.download(file); // Set disposition and send it.
 });
 
-app.listen(1337, function () {
-    console.log("Hello node");
+// Launch Your Application
+console.log("Launch Application");
+var server = app.listen(config.port, function () {
+  console.log('App running: http://%s:%s', server.address().address, server.address().port);
 });
