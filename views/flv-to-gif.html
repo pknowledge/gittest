@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8"></meta>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
-    <title>Convert MP4 to animated GIF</title>
-    <meta name="description" content="Online tool for converting videos to gifs. Upload MP4, AVI, MOV, WEBM, FLV and other video files and create animated gif images.">
-</head>
+<title>Convert FLV to animated GIF</title>
+<meta name="description" content="Online tool for converting videos to gifs. Upload MP4, AVI, MOV, WEBM, FLV and other video files and create animated gif images.">
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -26,11 +26,12 @@
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
                     <li ><a href="avi-to-gif.html">AVI to GIF</a></li>
-                    <li  class="active"><a href="mp4-to-gif.html">MP4 to GIF</a></li>
+                    <li  ><a href="mp4-to-gif.html">MP4 to GIF</a></li>
                     <li ><a href="mov-to-gif.html">MOV to GIF</a></li>
                     <li ><a href="webm-to-gif.html">WEBM to GIF</a></li>
-                    <li ><a href="flv-to-gif.html">FLV to GIF</a></li>
+                    <li class="active"><a href="flv-to-gif.html">FLV to GIF</a></li>
                     <li ><a href="ogv-to-gif.html">OGV to GIF</a></li>
+
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -40,10 +41,11 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1>MP4 to GIF converter!</h1>
-            <p>With this online MP4 to GIF converter software, we can easiley convert MP4 files to gif animated files. This MP4 to GIF converter supports mostly all major video extentions like including mp4. </p>
+            <h1>FLV to GIF converter!</h1>
+            <p>With this online FLV to GIF converter software, we can easiley convert FLV files to gif animated files.
+            This FLV to GIF converter supports mostly all major video extentions like including FLV. </p>
             <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
-            <p>This MP4 to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
+            <p>This  FLV to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
         </div>
     </div>
 
@@ -52,7 +54,7 @@
         <div class="row">
             <div class="col-sm-9 col-sm-push-3">
                 <div class="well">
-                    <form action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
+                    <form  action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
                         <div class="form-group">
                             <label for="file">Please specify a Vide file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
 
@@ -66,23 +68,22 @@
 
                         </div>
                         <div class="form-group">
-                            <input class="btn btn-success" type="submit" value="Upload and Convert">
+                            <input  class="btn btn-success" type="submit" value="Upload and Convert">
                         </div>
                     </form>
                     <center>
+                    <div class="form-group">
+                        <h2 id="demo"></h2>
+                        <form>
+                            <progress class="progress form-control" value="0" max="100"></progress><br>
+                    </div>
+                    </form>
+                    <form id="search-form" method="get" action="">
                         <div class="form-group">
-                            <h2 id="demo"></h2>
-                            <form>
-                                <progress class="progress form-control" value="0" max="100"></progress><br>
+                            <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
+                            <button class="btn btn-danger" type="submit">Download!</button>
                         </div>
-                        </form>
-                        <form id="search-form" method="get" action="">
-                            <div class="form-group">
-                                <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
-                                <button class="btn btn-danger" type="submit">Download!</button>
-                            </div>
-                        </form>
-                    </center>
+                    </form> </center>
                 </div>
 
 
@@ -99,12 +100,9 @@
     </div>
     <!-- /container -->
 
-    <script src="jquery/dist/jquery.js">
-    </script>
-    <script src="script.js">
-    </script>
-    <script src="bootstrap/dist/js/bootstrap.js">
-    </script>
+    <script src="jquery/dist/jquery.js">    </script>
+    <script src="script.js">    </script>
+    <script src="bootstrap/dist/js/bootstrap.js">    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </body>
 
