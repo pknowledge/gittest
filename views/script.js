@@ -27,6 +27,7 @@ var img_path = "";
 $(document).ready(function (e) {
     $("#CaptchaImg").hide();
     $("#search-form").hide();
+          $('input[type="submit"]').prop('disabled', true);
     //binds to onchange event of your input field
     $('#myFile').bind('change', function () {
         //this.files[0].size gets the size of your file.
@@ -58,7 +59,7 @@ $(document).ready(function (e) {
                     $('.progress').val(100 - ((t / 30000) * 100));
                 }, 300);
                 window.setTimeout(function () {
-                    // do whatever you want to do  
+                    // do whatever you want to do
 
                     $("#CaptchaImg").show();
                     $("#search-form").show();
