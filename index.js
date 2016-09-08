@@ -30,7 +30,7 @@ app.post('/upload', function (req, res) {
     // Get the temporary location of the file
 
 
-    var form = new formidable.IncomingForm();
+    var form = new formidable.IncomingForm();   
 
     form.on('end', function (fields, files) {
         /* Temporary location of our uploaded file */
