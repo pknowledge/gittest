@@ -1,0 +1,22 @@
+{
+  "name": "managefiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "formidable": "^1.0.17",
+    "fs-extra": "^0.30.0",
+    "node-cmd": "^1.1.1",
+    "quickthumb": "^0.0.12",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

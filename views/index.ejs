@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+                and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+                    Donec sed odio dui. </p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+                    Donec sed odio dui. </p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <form class="form-horizontal" action="http://192.168.0.126:1337/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
+                    <div class="form-group">
+                        Type some text (if you like):<br>
+                        <input type="text" name="textline" size="30">
+                    </div>
+                    <div class="form-group">
+                        Please specify a file, or a set of files:<br>
+
+                        <div style="position:relative;">
+                            <a class='btn btn-primary' href='javascript:;'>
+			Choose File...
+			<input type="file" name="datafile" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'  size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+		</a> &nbsp;
+                            <span class='label label-info' id="upload-file-info"></span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-default" type="submit" value="Send">
+                    </div>
+                </form>
+
+                <h2 id="demo"></h2>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                <script type="text/javascript">
+    $(document).ready(function (e) {
+      $("#uploadimage").on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: "http://192.168.0.126:3002/api/upload/", // Url to which the request is send
+            type: "POST",             // Type of request to be send, called as method
+            data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+            contentType: false,       // The content type used when sending data to the server.
+            cache: false,             // To unable request pages to be cached
+            processData: false,        // To send DOMDocument or non processed data file it is set to false
+            success: function (data)   // A function to be called if request succeeds
+            {
+                document.getElementById("demo").innerHTML = data;
+                console.log(data);
+            }
+        });
+        
+    });
+});
+
+
+    </script></div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2016 Company, Inc.</p>
+        </footer>
+    </div>
+    <!-- /container -->
+
+    <script src="jquery/dist/jquery.js">    </script>
+    <script src="bootstrap/dist/js/bootstrap.js">    </script>
+</body>
+
+</html>
