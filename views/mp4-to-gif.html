@@ -11,7 +11,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -20,11 +21,12 @@
                 <a class="navbar-brand" href="#">VideotoGIFconverter.com</a>
             </div>
             <!--/.navbar-collapse -->
+            <!--/.navbar-collapse -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="avi-to-gif.html">AVI to GIF</a></li>
-                    <li><a href="mp4-to-gif.html">MP4 to GIF</a></li>
+                    <li class="active"><a href="mp4-to-gif.html">MP4 to GIF</a></li>
 
                 </ul>
             </div>
@@ -36,9 +38,10 @@
     <div class="jumbotron">
         <div class="container">
             <h1>Video to GIF converter!</h1>
-            <p>With this online Video to GIF converter software, we can easiley convert video files to gif animated files. This video converter supports mostly all major video extentions like mp4, flv, avi, wmv, ovg end many more. </p>
+            <p>With this online Video to GIF converter software, we can easiley convert video files to gif animated files.
+            This video converter supports mostly all major video extentions like mp4, flv, avi, wmv, ovg end many more. </p>
             <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
-            <p>This Video to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
+            <p>This  Video to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
         </div>
     </div>
 
@@ -47,7 +50,7 @@
         <div class="row">
             <div class="col-sm-9 col-sm-push-3">
                 <div class="well">
-                    <form action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
+                    <form  action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
                         <div class="form-group">
                             <label for="file">Please specify a Vide file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
 
@@ -61,23 +64,22 @@
 
                         </div>
                         <div class="form-group">
-                            <input class="btn btn-success" type="submit" value="Upload and Convert">
+                            <input  class="btn btn-success" type="submit" value="Upload and Convert">
                         </div>
                     </form>
                     <center>
+                    <div class="form-group">
+                        <h2 id="demo"></h2>
+                        <form>
+                            <progress class="progress form-control" value="0" max="100"></progress><br>
+                    </div>
+                    </form>
+                    <form id="search-form" method="get" action="">
                         <div class="form-group">
-                            <h2 id="demo"></h2>
-                            <form>
-                                <progress class="progress form-control" value="0" max="100"></progress><br>
+                            <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
+                            <button class="btn btn-danger" type="submit">Download!</button>
                         </div>
-                        </form>
-                        <form id="search-form" method="get" action="">
-                            <div class="form-group">
-                                <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
-                                <button class="btn btn-danger" type="submit">Download!</button>
-                            </div>
-                        </form>
-                    </center>
+                    </form> </center>
                 </div>
 
 
@@ -94,12 +96,9 @@
     </div>
     <!-- /container -->
 
-    <script src="jquery/dist/jquery.js">
-    </script>
-    <script src="script.js">
-    </script>
-    <script src="bootstrap/dist/js/bootstrap.js">
-    </script>
+    <script src="jquery/dist/jquery.js">    </script>
+    <script src="script.js">    </script>
+    <script src="bootstrap/dist/js/bootstrap.js">    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </body>
 
