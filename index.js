@@ -74,6 +74,7 @@ app.get('/output/:id', function (req, res) {
     console.log("--------------------------------");
     var file = __dirname + '/output/' +req.params.id;
     res.download(file); // Set disposition and send it.
+    cmd.run('rm -r '+ file);
 });
 
 // Launch Your Application
