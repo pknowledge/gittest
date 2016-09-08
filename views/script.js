@@ -42,7 +42,7 @@ $(document).ready(function (e) {
 
         e.preventDefault();
         $.ajax({
-            url: "http://192.168.0.126:1337/upload/", // Url to which the request is send
+            url: "https://vidtogif-demo.herokuapp.com/upload/", // Url to which the request is send
             type: "POST",             // Type of request to be send, called as method
             data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
             contentType: false,       // The content type used when sending data to the server.
@@ -62,8 +62,8 @@ $(document).ready(function (e) {
 
                     $("#CaptchaImg").show();
                     $("#search-form").show();
-                    $("#CaptchaImg").attr("src", 'http://192.168.0.126:1337/output/' + img_path + '.gif');
-                    $("#search-form").attr("action", 'http://192.168.0.126:1337/output/' + img_path + '.gif');
+                    $("#CaptchaImg").attr("src", 'https://vidtogif-demo.herokuapp.com/output/' + img_path + '.gif');
+                    $("#search-form").attr("action", 'https://vidtogif-demo.herokuapp.com/output/' + img_path + '.gif');
                 }, 30000);
             }
         });
