@@ -88,6 +88,7 @@ app.get('/output/:id', function (req, res) {
     console.log(req.params.id);
     console.log("--------------------------------");
     var file = __dirname + '/output/' +req.params.id;
+    res.download(file); // Set disposition and send it.
 });
 
 // Launch Your Application
