@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8"></meta>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="icon" href="img/mp4-to-gif4.gif">
     <title>Convert video to animated GIF</title>
     <meta name="description" content="Online tool for converting videos to gifs. Upload MP4, AVI, MOV, WEBM, FLV and other video files and create animated gif images.">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -11,6 +12,7 @@
         $(function() {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
+            $("#side-bar").load("side-bar.html");
         });
     </script>
 
@@ -49,7 +51,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1>Video to GIF converter!</h1>
-            <p>With this online Video to GIF converter software, we can easiley convert video files to gif animated files. This video converter supports mostly all major video extentions like mp4, flv, avi, wmv, ovg end many more. </p>
+            <p>With this online Video to GIF converter software, we can easily convert video files to gif animated files. This video converter supports mostly all major video extentions like mp4, flv, avi, wmv, ovg end many more. </p>
             <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
             <p>This Video to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
         </div>
@@ -62,7 +64,7 @@
                 <div class="well">
                     <form action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
                         <div class="form-group">
-                            <label for="file">Please specify a Vide file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
+                            <label for="file">Upload your Video file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
 
                             <div style="position:relative;">
                                 <a class='btn btn-primary' href='javascript:;'>
@@ -86,7 +88,7 @@
                         </form>
                         <form id="search-form" method="get" action="">
                             <div class="form-group">
-                                <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
+                                <img class="img-responsive" id="CaptchaImg" alt="I Created a Gif using VideotoGIFs.com" style="" />
                                 <button class="btn btn-danger" type="submit">Download!</button>
                             </div>
                         </form>
@@ -94,10 +96,24 @@
                 </div>
 
 
+                <div class="panel panel-default">
+                    <div class="panel-heading">Animated Gif Maker</div>
+                    <div class="panel-body">
+                    <p>
+                      VideotoGIFs.com is a free online tool which allows you to convert video to gif images easily.
+                    </p>
+                        <p>If you have spent some time on internet, you will probably know what an animated GIF (Graphics Interchange Format) (better known by its acronym GIF / ɡɪf) is. GIF is an image file which contains animated images, which makes it seem like the image is moving. The GIF image can be created form images (one or more) or videos. GIFs are additions to your marketing. GIFs are easy to consume and provides a way to capture the attention of the viewer. That in turn have the emotional impact on the viewer and they are more likely to share the content. So these GIF images are worth experimenting. The good part about GIFs is that they are not very hard to make.
+
+                        </p>
+                        <p>
+                          GIF are not new, but now a day they are used more than ever. Brands like the idea of using GIFs in their content because they find GIFs more appealing than normal images. Also the GIFs are cheaper (or sometimes free) to be created if compared to videos. As be known GIFs are mostly few seconds long so their file size is significantly smaller. This make GIFs easy to upload compared to videos. Also auto loop increases the effectiveness of the brand's message. To ad on, we all know the exposure for GIFs integration with popular social networks like Facebook, Twitter, Reddit, Snapchat, Pinterest and many more. (Recently twitter even started its own collection of GIF images to make their use more convenient.) Even though viewers behave differently on every social network, GIFs are still popular in all there social sites.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-3 col-sm-pull-9">
-                <div class="list-group">
-                </div>
+              <!-- Fixed footer -->
+              <div id="side-bar"></div>
             </div>
         </div>
         <hr>

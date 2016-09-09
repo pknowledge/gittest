@@ -11,6 +11,7 @@
         $(function() {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
+            $("#side-bar").load("side-bar.html");
         });
     </script>
 </head>
@@ -49,7 +50,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1>WEBM to GIF converter!</h1>
-            <p>With this online WEBM to GIF converter software, we can easiley convert WEBM files to gif animated files. This WEBM to GIF converter supports mostly all major video extentions like including WEBM. </p>
+            <p>With this online WEBM to GIF converter software, we can easily convert WEBM files to gif animated files. This WEBM to GIF converter supports mostly all major video extensions like including WEBM. </p>
             <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
             <p>This WEBM to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
         </div>
@@ -62,7 +63,7 @@
                 <div class="well">
                     <form action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
                         <div class="form-group">
-                            <label for="file">Please specify a Vide file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
+                            <label for="file">Upload your Video file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
 
                             <div style="position:relative;">
                                 <a class='btn btn-primary' href='javascript:;'>
@@ -86,7 +87,7 @@
                         </form>
                         <form id="search-form" method="get" action="">
                             <div class="form-group">
-                                <img class="img-responsive" id="CaptchaImg" alt="Captcha" style="" />
+                                <img class="img-responsive" id="CaptchaImg" alt="I Created a Gif using VideotoGIFs.com" style="" />
                                 <button class="btn btn-danger" type="submit">Download!</button>
                             </div>
                         </form>
@@ -96,8 +97,8 @@
 
             </div>
             <div class="col-sm-3 col-sm-pull-9">
-                <div class="list-group">
-                </div>
+              <!-- Fixed footer -->
+              <div id="side-bar"></div>
             </div>
         </div>
         <hr>
