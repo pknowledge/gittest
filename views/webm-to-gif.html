@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <title>Convert WEBM to animated GIF</title>
     <meta name="description" content="Online tool for converting videos to gifs. Upload MP4, AVI, MOV, WEBM, FLV and other video files and create animated gif images.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 
 <body>
@@ -25,12 +32,12 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li ><a href="avi-to-gif.html">AVI to GIF</a></li>
-                    <li  ><a href="mp4-to-gif.html">MP4 to GIF</a></li>
-                    <li ><a href="mov-to-gif.html">MOV to GIF</a></li>
+                    <li><a href="avi-to-gif.html">AVI to GIF</a></li>
+                    <li><a href="mp4-to-gif.html">MP4 to GIF</a></li>
+                    <li><a href="mov-to-gif.html">MOV to GIF</a></li>
                     <li class="active"><a href="webm-to-gif.html">WEBM to GIF</a></li>
-                    <li ><a href="flv-to-gif.html">FLV to GIF</a></li>
-                    <li ><a href="ogv-to-gif.html">OGV to GIF</a></li>
+                    <li><a href="flv-to-gif.html">FLV to GIF</a></li>
+                    <li><a href="ogv-to-gif.html">OGV to GIF</a></li>
 
                 </ul>
             </div>
@@ -94,11 +101,11 @@
             </div>
         </div>
         <hr>
-        <footer>
-            <p>&copy; 2016 Company, Inc.</p>
-        </footer>
     </div>
     <!-- /container -->
+
+    <!-- Fixed footer -->
+    <div id="footer"></div>
 
     <script src="jquery/dist/jquery.js">
     </script>

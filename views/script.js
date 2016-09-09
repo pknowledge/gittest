@@ -25,6 +25,7 @@ var img_path = "";
 } ());
 
 $(document).ready(function (e) {
+  
     $("#CaptchaImg").hide();
     $("#search-form").hide();
           $('input[type="submit"]').prop('disabled', true);
