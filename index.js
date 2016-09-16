@@ -16,8 +16,8 @@ var job = new CronJob('00 00 00 * * 1-7', function() {
    * or Sunday.
    */
 
-   cmd.run('rm -r /app/uploads/*mp4 /app/uploads/*flv  /app/uploads/*avi  /app/uploads/*wmv');
-   cmd.run('rm -r /app/output/*mp4 /app/output/*flv  /app/output/*avi  /app/output/*wmv');
+   cmd.run('rm -r /app/uploads/*mp4 /app/uploads/*flv  /app/uploads/*avi  /app/uploads/*wmv /app/uploads/*mkv /app/uploads/*mov');
+   cmd.run('rm -r /app/output/*mp4 /app/output/*flv  /app/output/*avi  /app/output/*wmv /app/output/*.gif');
   }, function () {
     /* This function is executed when the job stops */
   },
