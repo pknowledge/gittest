@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8"></meta>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="icon" href="img/mp4-to-gif4.gif">
-    <title>Video to GIF converter | Convert video to animated GIF</title>
-    <meta name="description" content="Online tool for converting videos to gifs. Upload MP4, AVI, MOV, WEBM, FLV and other video files and create animated gif images.">
+    <title>MKV to GIF converter | Convert MKV to animated GIF</title>
+    <meta name="description" content="Online tool for converting MKV videos to gifs. Upload MP4, AVI, MKV, WEBM, FLV and other video files and create animated gif images.">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
         $(function() {
@@ -16,7 +14,6 @@
             $("#side-bar").load("side-bar.html");
         });
     </script>
-
 </head>
 
 <body>
@@ -32,16 +29,17 @@
                 <a class="navbar-brand" href="index.html">VideotoGIFs.com</a>
             </div>
             <!--/.navbar-collapse -->
+            <!--/.navbar-collapse -->
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="avi-to-gif.html">AVI to GIF</a></li>
                     <li><a href="mp4-to-gif.html">MP4 to GIF</a></li>
-                    <li><a href="mov-to-gif.html">MOV to GIF</a></li>
+                    <li ><a href="mov-to-gif.html">MKV to GIF</a></li>
                     <li><a href="webm-to-gif.html">WEBM to GIF</a></li>
                     <li><a href="flv-to-gif.html">FLV to GIF</a></li>
                     <li><a href="ogv-to-gif.html">OGV to GIF</a></li>
-                    <li><a href="mkv-to-gif.html">MKV to GIF</a></li>
+                    <li class="active"><a href="mkv-to-gif.html">MKV to GIF</a></li>
 
                 </ul>
             </div>
@@ -62,18 +60,16 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-                <!-- Main jumbotron for a primary marketing message or call to action -->
                 <div class="well">
-                        <h1>Video to GIF converter!</h1>
-                        <p>With this online Video to GIF converter software, we can easily convert video files to gif animated files. This video converter supports mostly all major video extensions like mp4, flv, avi, wmv, ovg end many more. </p>
-                        <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
-                        <p>This Video to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
-
+                    <h1>MKV to GIF converter!</h1>
+                    <p>With this online MKV to GIF converter software, we can easily convert MKV files to gif animated files. This MKV to GIF converter supports mostly all major video extensions like including MKV. </p>
+                    <p>After conversion you can simply download and save the gif file to your computer of smart phone. </p>
+                    <p>This MKV to GIF converter and convert a video file up to 10MB. The process of conversion may take up to 30 seconds.</p>
                 </div>
                 <div class="well">
                     <form action="https://vidtogif-demo.herokuapp.com/upload/" enctype="multipart/form-data" method="post" id="uploadimage">
                         <div class="form-group">
-                            <label for="file">Upload your Video file (MP4/AVI/WEBM/FLV/MOV and other video files),  up to 10MB:</label>
+                            <label for="file">Upload your Video file (MP4/AVI/WEBM/FLV/MKV and other video files),  up to 10MB:</label>
 
                             <div style="position:relative;">
                                 <a class='btn btn-primary' href='javascript:;'>
@@ -103,6 +99,7 @@
                         </form>
                     </center>
                 </div>
+
 
 
                 <div class="panel panel-primary">
